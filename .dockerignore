@@ -1,0 +1,10 @@
+.env
+logs/
+*.log
+*.jsonl
+memory.md
+TASKS.md
+AGENTS.md
+.git
+.gitignore
+__pycache__/
