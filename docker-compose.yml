@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  traffic-bot:
+    build: .
+    container_name: traffic-bot
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/logs
+    restart: unless-stopped

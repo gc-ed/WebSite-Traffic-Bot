@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/about/technical-framework",
+    "/news-and-media/events",
+    "/news-and-media/news",
+    "/outcomes",
+    "/pilots/1",
+    "/pilots/2",
+    "/pilots/3"
+  ]
+}
