@@ -9,6 +9,7 @@ This project runs a Dockerized traffic simulation bot that visits a target websi
 ## Setup
 1. Ensure the `.env` file is present and configured with `TARGET_URL` and `PROXY_LIST` (optional).
 2. Update `config/targets.json` with the paths you want the bot to visit.
+3. In the `.env` file, there is a variable `AUTO_DISCOVER_ROUTES=true`. It crawls the site on every startup and then every 30 days. If it fails to crawl it,  if takes the default variables found in `config/targets.json` folder.
 
 ## Build and Run
 > **Important:** All Docker commands should be executed from within your Linux Subsystem (WSL Ubuntu), not from Windows PowerShell or Command Prompt.
