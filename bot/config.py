@@ -19,6 +19,7 @@ class Config:
     kpi_log_path: str
     run_interval_min: int
     target_routes: List[str]
+    auto_discover_routes: bool
 
 def load_config() -> Config:
     target_url = os.getenv("TARGET_URL")
@@ -49,7 +50,8 @@ def load_config() -> Config:
         proxy_list=proxy_list,
         kpi_log_path=os.getenv("KPI_LOG_PATH", "/logs/kpi.log"),
         run_interval_min=int(os.getenv("RUN_INTERVAL_MIN", "30")),
-        target_routes=routes
+        target_routes=routes,
+        auto_discover_routes=os.getenv("AUTO_DISCOVER_ROUTES", "false").lower() == "true"
     )
 
 config = load_config()
